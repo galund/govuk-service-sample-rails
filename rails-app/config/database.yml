@@ -1,0 +1,17 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: db
+  username: postgres
+  password:
+  pool: 5
+
+development:
+  <<: *default
+  database: govuk_service_sample_development
+
+
+test:
+  <<: *default
+  database: govuk_service_sample_test
+
